@@ -6,6 +6,12 @@ import "./App.css";
 function App() {
   const [count, setCount] = useState(0);
 
+  try {
+    const [escheck, setEscheck] = useState(0);
+  } catch (error) {
+    console.error("Error using escheck variable:", error);
+  }
+
   return (
     <>
       <div>
