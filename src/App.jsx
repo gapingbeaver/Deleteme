@@ -7,7 +7,7 @@ function App() {
   const [count, setCount] = useState(0);
 
   try {
-    const [escheck, setEscheck] = useState(0); // Changed Here!
+    const [escheck, setEscheck] = useState(0); // Changed Again Here!
   } catch (error) {
     console.error("Error using escheck variable:", error);
   }
