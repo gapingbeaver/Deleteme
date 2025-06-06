@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-echo 'Hello Husky!'
-
+echo "Hello, husky is running!"
 npx lint-staged
+echo "OK. done."
