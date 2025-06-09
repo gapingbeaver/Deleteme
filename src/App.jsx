@@ -6,16 +6,18 @@ import "./App.css";
 function App() {
   const [count, setCount] = useState(0);
 
-  try {
-    const [escheck, setEscheck] = useState(0); // Changed Plz Here!
-  } catch (error) {
-    console.error("Error using escheck variable:", error);
-  }
+  /* try {
+  //   const [escheck, setEscheck] = useState(0); // 권한 Test
+  // } catch (error) {
+  //   console.error("Error using escheck variable:", error);
+  //   console.log("Checker!");
+  // }
+  */
 
   return (
     <>
       <div>
-                    <a href="https://vite.dev" target="_blank">
+        <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />
         </a>
         <a href="https://react.dev" target="_blank">

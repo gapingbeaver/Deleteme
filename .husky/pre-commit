@@ -4,3 +4,5 @@
 echo "Hello, husky is running!"
 npx lint-staged
 echo "OK. done."
+
+# npm test

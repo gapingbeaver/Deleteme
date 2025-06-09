@@ -26,7 +26,8 @@
     "globals": "^16.0.0",
     "husky": "^9.1.7",
     "lint-staged": "^16.1.0",
-    "prettier": "3.5.3",
+    "prettier": "^3.5.3",
+    "prettier-plugin-tailwindcss": "^0.6.12",
     "vite": "^6.3.5"
   },
   "lint-staged": {
@@ -34,6 +35,6 @@
       "eslint --fix",
       "prettier --write"
     ],
-    "**/*": "prettier --write --ignore-unknown"
+    "**/{json,css,md}": "prettier --write --ignore-unknown"
   }
 }
