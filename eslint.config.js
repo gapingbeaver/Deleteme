@@ -1,3 +1,5 @@
+// eslint.config.js
+import babelParser from "@babel/eslint-parser";
 import js from "@eslint/js";
 import globals from "globals";
 import reactHooks from "eslint-plugin-react-hooks";
@@ -8,13 +10,17 @@ export default [
   {
     files: ["**/*.{js,jsx}"],
     languageOptions: {
-      ecmaVersion: 2020,
-      globals: globals.browser,
+      parser: babelParser,
       parserOptions: {
+        requireConfigFile: false,
         ecmaVersion: "latest",
-        ecmaFeatures: { jsx: true },
         sourceType: "module",
+        ecmaFeatures: { jsx: true },
+        babelOptions: {
+          presets: ["@babel/preset-react"],
+        },
       },
+      globals: globals.browser,
     },
     plugins: {
       "react-hooks": reactHooks,

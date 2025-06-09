@@ -6,13 +6,15 @@ import "./App.css";
 function App() {
   const [count, setCount] = useState(0);
 
-  /* try {
+  // Uncomment the following lines to test the escheck variable 이것도 에러 뜨나.
+
+  // try {
   //   const [escheck, setEscheck] = useState(0); // 권한 Test
   // } catch (error) {
   //   console.error("Error using escheck variable:", error);
   //   console.log("Checker!");
   // }
-  */
+  // 통과되야지 이제.
 
   return (
     <>
