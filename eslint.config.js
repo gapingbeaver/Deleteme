@@ -1,24 +1,20 @@
 // eslint.config.js
-import babelParser from "@babel/eslint-parser";
+import tseslint from "typescript-eslint";
 import js from "@eslint/js";
 import globals from "globals";
 import reactHooks from "eslint-plugin-react-hooks";
 import reactRefresh from "eslint-plugin-react-refresh";
 
-export default [
+export default tseslint.config([
   { ignores: ["dist"] },
   {
-    files: ["**/*.{js,jsx}"],
+    files: ["**/*.{js,jsx,ts,tsx}"],
     languageOptions: {
-      parser: babelParser,
+      parser: tseslint.parser,
       parserOptions: {
-        requireConfigFile: false,
         ecmaVersion: "latest",
         sourceType: "module",
         ecmaFeatures: { jsx: true },
-        babelOptions: {
-          presets: ["@babel/preset-react"],
-        },
       },
       globals: globals.browser,
     },
@@ -37,4 +33,4 @@ export default [
       ],
     },
   },
-];
+]);
