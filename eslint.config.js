@@ -14,9 +14,9 @@ import tseslint from 'typescript-eslint'
 
 export default defineConfig([
   { ignores: ['dist'] },
-	{
-		files: ['**/*.ts', '**/*.tsx'],
-		languageOptions: {
+  {
+    files: ['**/*.ts', '**/*.tsx'],
+    languageOptions: {
       parser: tseslint.parser,
       parserOptions: {
         project: './tsconfig.json',
@@ -38,13 +38,13 @@ export default defineConfig([
       reactHooks.configs.recommended,
       query.configs.recommended,],
     settings: {
-    "import/resolver": {
+      "import/resolver": {
         typescript: {
           project: "./tsconfig.json",
           alwaysTryTypes: true,
         }
       },
-    "import/parsers": {
+      "import/parsers": {
         "@typescript-eslint/parser": [".ts", ".tsx"],
       }
     },
