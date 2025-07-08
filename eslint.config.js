@@ -33,8 +33,8 @@ export default defineConfig([
       'import': importPlugin,
       '@tanstack/query': query,
     },
-		extends: [js.configs.recommended, ...tseslint.configs.recommended,
-		  react.configs.recommended,
+    extends: [js.configs.recommended, ...tseslint.configs.recommended,
+      react.configs.recommended,
       reactHooks.configs.recommended,
       query.configs.recommended,],
     settings: {
@@ -51,5 +51,5 @@ export default defineConfig([
     rules: {
       'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
     },
-	},
+  },
 ]);
